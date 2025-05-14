@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>doshida Pocket＋Code</title>
+  <style>
+    :root {
+      --main-blue: #009ACD;
+      --main-orange: #F5793A;
+      --highlight-orange: #FFB347;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefdf9;
+      color: #333;
+    }
+
+    header {
+      background: var(--main-blue);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 999;
+      padding-top: 4.5rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .doshida {
+      font-size: 0.8rem;
+      vertical-align: middle;
+    }
+
+    .main-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: var(--main-orange);
+      padding: 0.5rem;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      flex: 1 0 auto;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    nav a.active {
+      background: var(--highlight-orange);
+    }
+
+    #content {
+      padding-top: 140px;
+    }
+
+    #content section {
+      display: none;
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    #content section.active {
+      display: block;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--main-orange);
+      color: white;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      line-height: 48px;
+      text-align: center;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+    }
+
+    .logo {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--main-blue);
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        flex: none;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="nav-link active" data-target="intro">自己紹介</a>
+    <a href="#" class="nav-link" data-target="school">プログラミング教室</a>
+    <a href="#" class="nav-link" data-target="support">スマホ・パソコンサポート</a>
+    <a href="#" class="nav-link" data-target="contact">問い合わせ</a>
+  </nav>
+
+  <header>
+    <img src="images/PocketCode.png" alt="ロゴ" class="logo">
+    <!-- <div><span class="doshida">doshida</span> <span class="main-title">Pocket＋Code</span></div> -->
+    <p>子育て中の元SEがゆる～とITサポートしています</p>
+  </header>
+
+  <div id="content">
+    <section id="intro" class="active">
+      <h2>自己紹介</h2>
+      <p>はじめまして！doshida Pocket＋Codeをご覧いただきありがとうございます。</p>
+      <p>練馬区土支田在住、2児の母で、元SEとしての経験を活かしながら地域の皆さまに寄り添ったITサポートを行っています。</p>
+      <p>子どもたちには楽しく学べるプログラミングを、大人の方にはスマホやパソコンの操作、エクセルの使い方、最近話題の生成AIまで、分かる範囲でやさしくサポートします。</p>
+      <p>地域密着で活動しているので、何か困ったことがあれば、まずは気軽にお問い合わせくださいね♪</p>
+    </section>
+
+    <section id="school">
+      <h2>プログラミング教室</h2>
+      <p>小学生向けのプログラミング教室を開講中！スクラッチを使って、ゲームやアニメーションを楽しく作りながら、論理的思考や創造力を育みます。</p>
+      <ul>
+        <li>対象：小学1年生〜6年生</li>
+        <li>内容：スクラッチによる作品作り</li>
+        <li>開催日：毎週土曜日 午後</li>
+      </ul>
+    </section>
+
+    <section id="support">
+      <h2>スマホ・パソコンサポート</h2>
+      <p>スマホの基本操作から、パソコンでのエクセル操作、話題の生成AIの使い方まで、幅広くサポートしています。</p>
+      <ul>
+        <li>スマホの初期設定、写真の整理など</li>
+        <li>エクセルの使い方や資料作成のサポート</li>
+        <li>ChatGPTなど生成AIの基本的な使い方</li>
+        <li>ご自宅訪問もご相談ください</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>問い合わせ</h2>
+      <p>以下のGoogleフォームからお気軽にお問い合わせください。</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1234567890abcdefg/viewform" target="_blank" class="contact-button">Googleフォームで問い合わせる</a>
+    </section>
+  </div>
+
+  <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+  <script>
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('#content section');
+
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('data-target');
+
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+        sections.forEach(section => {
+          section.classList.toggle('active', section.id === targetId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
