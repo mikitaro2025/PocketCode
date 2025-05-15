@@ -1,217 +1,450 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>doshida Pocket＋Code</title>
-  <style>
-    :root {
-      --main-blue: #009ACD;
-      --main-orange: #F5793A;
-      --highlight-orange: #FFB347;
-    }
+  <head>
+    <meta charset="UTF-8" />
 
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fefdf9;
-      color: #333;
-    }
+    <title>Pocket +Code｜土支田でゆるりとITサポート｜</title>
+    <meta
+      property="og:title"
+      content="Pocket +Code｜土支田でゆるりとITサポート"
+    />
 
-    header {
-      background: var(--main-blue);
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      position: relative;
-      z-index: 999;
-      padding-top: 4.5rem;
-    }
+    <meta
+      name="description"
+      content="練馬区土支田でプログラミング教室やITサポートをしています。"
+    />
+    <meta
+      property="og:description"
+      content="練馬区土支田でプログラミング教室やITサポートをしています。"
+    />
 
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
+    <meta property="og:url" content="https://doshida-pocketcode.netlify.app/" />
 
-    .doshida {
-      font-size: 0.8rem;
-      vertical-align: middle;
-    }
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/PocketCodeBig.png" />
+    <meta property="og:site_name" content="Pocket +Code" />
+    <meta name="viewport" content="width=device-width, user-scalable = no" />
+    <link rel="stylesheet" href="css/style.css" />
 
-    .main-title {
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+    ></script>
 
-    nav {
-      background: var(--main-orange);
-      padding: 0.5rem;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 1rem;
-      flex: 1 0 auto;
-      text-align: center;
-      white-space: nowrap;
-    }
+    <script type="text/javascript" src="js/jquery.matchHeight.js"></script>
 
-    nav a.active {
-      background: var(--highlight-orange);
-    }
-
-    #content {
-      padding-top: 140px;
-    }
-
-    #content section {
-      display: none;
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    #content section.active {
-      display: block;
-    }
-
-    .scroll-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--main-orange);
-      color: white;
-      width: 48px;
-      height: 48px;
-      font-size: 1.5rem;
-      line-height: 48px;
-      text-align: center;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      z-index: 1000;
-    }
-
-    .logo {
-      max-width: 120px;
-      display: block;
-      margin: 0 auto 1rem;
-    }
-
-    .contact-button {
-      display: inline-block;
-      background: var(--main-blue);
-      color: white;
-      padding: 0.8rem 1.2rem;
-      border-radius: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!--Webfont-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="robots" content="max-image-preview:large" />
+    <style>
+      img:is([sizes="auto" i], [sizes^="auto," i]) {
+        contain-intrinsic-size: 3000px 1500px;
       }
+    </style>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji:
+            "https:\/\/doshida-pocketcode.netlify.app\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1",
+        },
+      };
+      /*! This file is auto-generated */
+      !(function (i, n) {
+        var o, s, e;
+        function c(e) {
+          try {
+            var t = { supportTests: e, timestamp: new Date().valueOf() };
+            sessionStorage.setItem(o, JSON.stringify(t));
+          } catch (e) {}
+        }
+        function p(e, t, n) {
+          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0);
+          var t = new Uint32Array(
+              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+            ),
+            r =
+              (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+              e.fillText(n, 0, 0),
+              new Uint32Array(
+                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+              ));
+          return t.every(function (e, t) {
+            return e === r[t];
+          });
+        }
+        function u(e, t, n) {
+          switch (t) {
+            case "flag":
+              return n(
+                e,
+                "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
+                "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"
+              )
+                ? !1
+                : !n(
+                    e,
+                    "\ud83c\uddfa\ud83c\uddf3",
+                    "\ud83c\uddfa\u200b\ud83c\uddf3"
+                  ) &&
+                    !n(
+                      e,
+                      "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+                      "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
+                    );
+            case "emoji":
+              return !n(
+                e,
+                "\ud83d\udc26\u200d\ud83d\udd25",
+                "\ud83d\udc26\u200b\ud83d\udd25"
+              );
+          }
+          return !1;
+        }
+        function f(e, t, n) {
+          var r =
+              "undefined" != typeof WorkerGlobalScope &&
+              self instanceof WorkerGlobalScope
+                ? new OffscreenCanvas(300, 150)
+                : i.createElement("canvas"),
+            a = r.getContext("2d", { willReadFrequently: !0 }),
+            o = ((a.textBaseline = "top"), (a.font = "600 32px Arial"), {});
+          return (
+            e.forEach(function (e) {
+              o[e] = t(a, e, n);
+            }),
+            o
+          );
+        }
+        function t(e) {
+          var t = i.createElement("script");
+          (t.src = e), (t.defer = !0), i.head.appendChild(t);
+        }
+        "undefined" != typeof Promise &&
+          ((o = "wpEmojiSettingsSupports"),
+          (s = ["flag", "emoji"]),
+          (n.supports = { everything: !0, everythingExceptFlag: !0 }),
+          (e = new Promise(function (e) {
+            i.addEventListener("DOMContentLoaded", e, { once: !0 });
+          })),
+          new Promise(function (t) {
+            var n = (function () {
+              try {
+                var e = JSON.parse(sessionStorage.getItem(o));
+                if (
+                  "object" == typeof e &&
+                  "number" == typeof e.timestamp &&
+                  new Date().valueOf() < e.timestamp + 604800 &&
+                  "object" == typeof e.supportTests
+                )
+                  return e.supportTests;
+              } catch (e) {}
+              return null;
+            })();
+            if (!n) {
+              if (
+                "undefined" != typeof Worker &&
+                "undefined" != typeof OffscreenCanvas &&
+                "undefined" != typeof URL &&
+                URL.createObjectURL &&
+                "undefined" != typeof Blob
+              )
+                try {
+                  var e =
+                      "postMessage(" +
+                      f.toString() +
+                      "(" +
+                      [JSON.stringify(s), u.toString(), p.toString()].join(
+                        ","
+                      ) +
+                      "));",
+                    r = new Blob([e], { type: "text/javascript" }),
+                    a = new Worker(URL.createObjectURL(r), {
+                      name: "wpTestEmojiSupports",
+                    });
+                  return void (a.onmessage = function (e) {
+                    c((n = e.data)), a.terminate(), t(n);
+                  });
+                } catch (e) {}
+              c((n = f(s, u, p)));
+            }
+            t(n);
+          })
+            .then(function (e) {
+              for (var t in e)
+                (n.supports[t] = e[t]),
+                  (n.supports.everything =
+                    n.supports.everything && n.supports[t]),
+                  "flag" !== t &&
+                    (n.supports.everythingExceptFlag =
+                      n.supports.everythingExceptFlag && n.supports[t]);
+              (n.supports.everythingExceptFlag =
+                n.supports.everythingExceptFlag && !n.supports.flag),
+                (n.DOMReady = !1),
+                (n.readyCallback = function () {
+                  n.DOMReady = !0;
+                });
+            })
+            .then(function () {
+              return e;
+            })
+            .then(function () {
+              var e;
+              n.supports.everything ||
+                (n.readyCallback(),
+                (e = n.source || {}).concatemoji
+                  ? t(e.concatemoji)
+                  : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
+            }));
+      })((window, document), window._wpemojiSettings);
+      /* ]]> */
+    </script>
 
-      nav a {
-        flex: none;
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+
+    
+
+    <meta name="generator" content="WordPress 6.8.1" />
+    <link rel="icon" href="images/PocketCodeMini.png" sizes="32x32" />
+    <link rel="icon" href="images/PocketCode.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/PocketCode.png" />
+    <meta name="msapplication-TileImage" content="images/PocketCode.png" />
+  </head>
+  <body class="home blog wp-theme-PC" id="pagetop">
+    <!--Header-->
+    <header>
+      <div class="toggle"><span></span><span></span><span></span></div>
+      <div id="menu">
+        <div class="navi_area">
+          <div class="navi">
+            <ul class="main">
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/"
+                  ><span class="link_line">ホーム</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/about/"
+                  ><span class="link_line">自己紹介</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/programming/"
+                  ><span class="link_line">プログラミング教室</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/itsupport/"
+                  ><span class="link_line">ITサポート</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/contact/"
+                  ><span class="link_line">お問い合わせ</span></a
+                >
+              </li>
+            </ul>
+
+            <!--
+<ul class="sub">
+<li><a href="/about/#access"><span class="access">アクセス</span></a></li>
+<li><a href="/about/#contact"><span class="contact">お問い合わせ</span></a></li>
+</ul>
+-->
+          </div>
+          <!--navi-->
+        </div>
+        <!--navi_area-->
+      </div>
+      <!--menu-->
+    </header>
+
+    <div class="key">
+      <div class="key_load">
+        <img src="images/load.svg" />
+      </div>
+
+      <div class="bg_key">
+        <div class="bg_texture">
+          <div class="bg_texture_slide">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <!--bg_texture-->
+      </div>
+
+      <div class="img">
+        <div class="ph">
+          <div class="ph01"><img src="images/PocketCode.png" /></div>
+          <div class="ph02"><img src="images/PocketCode.png" /></div>
+          <div class="ph03"><img src="images/PocketCode.png" /></div>
+        </div>
+        <div class="waku">
+          <span class="item item01"
+            ><img src="images/blue.svg" class="img01" /><img
+              src="images/blue.svg"
+              class="img02"
+          /></span>
+          <span class="item item02"
+            ><img src="images/yellow.svg" class="img01" /><img
+              src="images/yellow.svg"
+              class="img02"
+          /></span>
+          <span class="item item03"
+            ><img src="images/blue.svg" class="img01" /><img
+              src="images/blue.svg"
+              class="img02"
+          /></span>
+          <span class="item item04"
+            ><img src="images/yellow.svg" class="img01" /><img
+              src="images/yellow.svg"
+              class="img02"
+          /></span>
+          <span class="item item05"
+            ><img src="images/blue.svg" class="img01" /><img
+              src="images/blue.svg"
+              class="img02"
+          /></span>
+          <span class="item item06"
+            ><img src="images/yellow.svg" class="img01" /><img
+              src="images/yellow.svg"
+              class="img02"
+          /></span>
+        </div>
+        <!--waku-->
+      </div>
+      <!--img-->
+
+    </div>
+    <!--key-->
+
+    <div class="news_list wide_center">
+      <ul>
+        <li>
+          <span class="cate other">New</span
+          ><span class="date">2025年06月01日</span
+          ><a
+            href="https://doshida-pocketcode.netlify.app/information/"
+            class="title"
+            >サイトオープン</a
+          >
+        </li>
+
+        <li>
+          <span class="cate other">募集</span
+          ><span class="date">2025年XX月XX日</span
+          ><a
+            href="https://doshida-pocketcode.netlify.app/information/"
+            class="title"
+            >プログラミング教室生徒募集</a
+          >
+        </li>
+      </ul>
+      <a href="information/" class="btn"
+        ><span class="line"><span class="in">お知らせ一覧へ</span></span></a
+      >
+    </div>
+    <!--news_list-->
+
+    <div class="portal">
+      <div class="lead box_kakko wide_center">
+        <div class="inner">
+          <div class="in">
+            <h2 class="sst_standard sst_standard_yellow">Pocekt+Codeとは</h2>
+            <p>
+              練馬区土支田にて2人の男子を子育て中の元SEママが始めます。持ってる技術を生かして誰かのお役に立てる事業をしてみようかなと考えました。ゆるりと手探りにすすめていこうと思いますので、よろしくお願いいたします。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--lead-->
+
+      <ul class="wide_center">
+        <li>
+          <a href="https://doshida-pocketcode.netlify.app/about/"
+            ><h3 class="st"><span class="line">自己紹介</span></h3>
+            <div class="link_img">
+              <img src="images/PocketCodeBig.png" />
+            </div>
+            <span class="link"
+              ><span class="arrow arrow_red">詳しくはこちら</span></span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="https://doshida-pocketcode.netlify.app/programming/"
+            ><h3 class="st">
+              <span class="line">プログラミング<br />　 　教室</span>
+            </h3>
+            <div class="link_img">
+              <img src="images/programming.jpg" />
+            </div>
+            <span class="link"
+              ><span class="arrow arrow_blue">詳しくはこちら</span></span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="https://doshida-pocketcode.netlify.app/itsupport/"
+            ><h3 class="st"><span class="line">ITサポート</span></h3>
+            <div class="link_img">
+              <img src="images/itsupport.jpg" />
+            </div>
+            <span class="link"
+              ><span class="arrow arrow_green">詳しくはこちら</span></span
+            ></a
+          >
+        </li>
+      </ul>
+    </div>
+    <!--portal-->
+
+    <script type="speculationrules">
+      {
+        "prefetch": [
+          {
+            "source": "document",
+            "where": {
+              "and": [
+                { "href_matches": "\/*" },
+                {
+                  "not": {
+                    "href_matches": [
+                      "\/wp\/wp-*.php",
+                      "\/wp\/wp-admin\/*",
+                      "\/wp\/wp-content\/uploads\/*",
+                      "\/wp\/wp-content\/*",
+                      "\/wp\/wp-content\/plugins\/*",
+                      "\/wp\/wp-content\/themes\/mikoto\/*",
+                      "\/*\\?(.+)"
+                    ]
+                  }
+                },
+                { "not": { "selector_matches": "a[rel~=\"nofollow\"]" } },
+                {
+                  "not": { "selector_matches": ".no-prefetch, .no-prefetch a" }
+                }
+              ]
+            },
+            "eagerness": "conservative"
+          }
+        ]
       }
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="#" class="nav-link active" data-target="intro">自己紹介</a>
-    <a href="#" class="nav-link" data-target="school">プログラミング教室</a>
-    <a href="#" class="nav-link" data-target="support">スマホ・パソコンサポート</a>
-    <a href="#" class="nav-link" data-target="contact">問い合わせ</a>
-  </nav>
-
-  <header>
-    <img src="images/PocketCode.png" alt="ロゴ" class="logo">
-    <!-- <div><span class="doshida">doshida</span> <span class="main-title">Pocket＋Code</span></div> -->
-    <p>子育て中の元SEがゆる～とITサポートしています</p>
-  </header>
-
-  <div id="content">
-    <section id="intro" class="active">
-      <h2>自己紹介</h2>
-      <p>はじめまして！doshida Pocket＋Codeをご覧いただきありがとうございます。</p>
-      <p>練馬区土支田在住、2児の母で、元SEとしての経験を活かしながら地域の皆さまに寄り添ったITサポートを行っています。</p>
-      <p>子どもたちには楽しく学べるプログラミングを、大人の方にはスマホやパソコンの操作、エクセルの使い方、最近話題の生成AIまで、分かる範囲でやさしくサポートします。</p>
-      <p>地域密着で活動しているので、何か困ったことがあれば、まずは気軽にお問い合わせくださいね♪</p>
-    </section>
-
-    <section id="school">
-      <h2>プログラミング教室</h2>
-      <p>小学生向けのプログラミング教室を開講中！スクラッチを使って、ゲームやアニメーションを楽しく作りながら、論理的思考や創造力を育みます。</p>
-      <ul>
-        <li>対象：小学1年生〜6年生</li>
-        <li>内容：スクラッチによる作品作り</li>
-        <li>開催日：毎週土曜日 午後</li>
-      </ul>
-    </section>
-
-    <section id="support">
-      <h2>スマホ・パソコンサポート</h2>
-      <p>スマホの基本操作から、パソコンでのエクセル操作、話題の生成AIの使い方まで、幅広くサポートしています。</p>
-      <ul>
-        <li>スマホの初期設定、写真の整理など</li>
-        <li>エクセルの使い方や資料作成のサポート</li>
-        <li>ChatGPTなど生成AIの基本的な使い方</li>
-        <li>ご自宅訪問もご相談ください</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>問い合わせ</h2>
-      <p>以下のGoogleフォームからお気軽にお問い合わせください。</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1234567890abcdefg/viewform" target="_blank" class="contact-button">Googleフォームで問い合わせる</a>
-    </section>
-  </div>
-
-  <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
-
-  <script>
-    const scrollTopBtn = document.querySelector('.scroll-top');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('#content section');
-
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('data-target');
-
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-
-        sections.forEach(section => {
-          section.classList.toggle('active', section.id === targetId);
-        });
-      });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

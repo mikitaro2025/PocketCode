@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <style>.cls-1 { fill: #1499b9; }</style>
+  <style>.cls-2 { fill: #e39b2a; }</style>
+  <ellipse class="cls-1" cx="170.0" cy="100.0" rx="20" ry="40" transform="rotate(0.0 170.0 100.0)"/>
+  <ellipse class="cls-2" cx="149.5" cy="149.5" rx="20" ry="40" transform="rotate(45.0 149.5 149.5)"/>
+  <ellipse class="cls-1" cx="100.0" cy="170.0" rx="20" ry="40" transform="rotate(90.0 100.0 170.0)"/>
+  <ellipse class="cls-2" cx="50.5" cy="149.5" rx="20" ry="40" transform="rotate(135.0 50.5 149.5)"/>
+  <ellipse class="cls-1" cx="30.0" cy="100.0" rx="20" ry="40" transform="rotate(180.0 30.0 100.0)"/>
+  <ellipse class="cls-2" cx="50.5" cy="50.5" rx="20" ry="40" transform="rotate(225.0 50.5 50.5)"/>
+  <ellipse class="cls-1" cx="100.0" cy="30.0" rx="20" ry="40" transform="rotate(270.0 100.0 30.0)"/>
+  <ellipse class="cls-2" cx="149.5" cy="50.5" rx="20" ry="40" transform="rotate(315.0 149.5 50.5)"/>
+</svg>
