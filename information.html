@@ -1,100 +1,120 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>お知らせ</title>
-  <style>
-    body {
-      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
-      background: #fffaf4;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お知らせ</title>
+    <style>
+      body {
+        font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+        background: #fffaf4;
+        margin: 0;
+        padding: 0;
+      }
 
-    .news-section {
-      max-width: 800px;
-      margin: 50px auto;
-      background: #fffaf4;
-      padding: 40px 20px;
-    }
+      .news-section {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 40px 20px;
+      }
 
-    .news-section h2 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
+      .news-section h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
 
-    .news-item {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px dotted #ccc;
-      padding: 15px 0;
-    }
+      .news-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px dotted #ccc;
+        padding: 15px 0;
+        flex-wrap: wrap;
+      }
 
-    .label {
-      background-color: #f2a13a;
-      color: white;
-      font-size: 12px;
-      padding: 5px 10px;
-      border-radius: 3px;
-      margin-right: 15px;
-      white-space: nowrap;
-    }
+      .label {
+        background-color: #f2a13a;
+        color: white;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        margin-right: 15px;
+        white-space: nowrap;
+        margin-bottom: 5px;
+      }
 
-    .label.event {
-      background-color: #f25a3a;
-    }
+      .label.event {
+        background-color: #f25a3a;
+      }
 
-    .date {
-      font-size: 14px;
-      color: #666;
-      margin-right: 15px;
-      white-space: nowrap;
-    }
+      .date {
+        font-size: 14px;
+        color: #666;
+        margin-right: 15px;
+        white-space: nowrap;
+        margin-bottom: 5px;
+      }
 
-    .title {
-      font-size: 16px;
-      color: #333;
-      flex: 1;
-    }
-  </style>
-</head>
-<body>
-  <div class="news-section">
-    <h2>お知らせ</h2>
+      .title {
+        font-size: 16px;
+        color: #333;
+        flex: 1;
+        min-width: 100px;
+      }
 
-    <div class="news-item">
+      /* ✅ レスポンシブ対応：画面幅が600px以下なら縦並び */
+      @media (max-width: 600px) {
+        .news-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .label,
+        .date {
+          margin-right: 0;
+        }
+
+        .title {
+          margin-top: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="news-section">
+      <h2>お知らせ</h2>
+
+      <div class="news-item">
         <span class="label">その他</span>
-        <span class="date">2025年XX月XX日</span>
-        <span class="title">XXXXXXXXXXXXXXXXXXXXXXXXX</span>
+        <span class="date">2025年03月04日</span>
+        <span class="title">4月1日(火)入園式のお知らせ</span>
       </div>
 
-    <div class="news-item">
+      <div class="news-item">
         <span class="label">その他</span>
-        <span class="date">2025年XX月XX日</span>
-        <span class="title">XXXXXXXXXXXXXXXXXXXXXXXXX</span>
+        <span class="date">2025年02月18日</span>
+        <span class="title">保護者の皆様へお願い</span>
       </div>
 
-    <div class="news-item">
-      <span class="label">その他</span>
-      <span class="date">2025年XX月XX日</span>
-      <span class="title">ホームページ作成依頼も受け付けます</span>
-    </div>
+      <div class="news-item">
+        <span class="label">その他</span>
+        <span class="date">2025年02月17日</span>
+        <span class="title">4月 土曜保育利用希望者の方へ</span>
+      </div>
 
-    <div class="news-item">
-      <span class="label event">募集</span>
-      <span class="date">2025年XX月XX日</span>
-      <span class="title">プログラミング教室生徒募集</span>
-    </div>
+      <div class="news-item">
+        <span class="label event">行事</span>
+        <span class="date">2025年01月22日</span>
+        <span class="title">入園説明会を開催します</span>
+      </div>
 
-    <div class="news-item">
-      <span class="label">New</span>
-      <span class="date">2025年06月01日</span>
-      <span class="title">サイトオープン</span>
+      <div class="news-item">
+        <span class="label">その他</span>
+        <span class="date">2024年12月05日</span>
+        <span class="title">みこと保育園ウェブサイト公開</span>
+      </div>
     </div>
-
-  </div>
-</body>
+  </body>
 </html>
