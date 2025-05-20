@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>お知ら</title>
+    <title>自己紹介</title>
     <style>
       body {
         font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
@@ -12,13 +12,13 @@
         padding: 0;
       }
 
-      .news-section {
+      .about-section {
         max-width: 800px;
         margin: 50px auto;
         padding: 40px 20px;
       }
 
-      .news-section h2 {
+      .about-section h2 {
         text-align: center;
         font-size: 24px;
         margin-bottom: 30px;
@@ -26,94 +26,99 @@
         padding-bottom: 10px;
       }
 
-      .news-item {
-        display: flex;
-        align-items: center;
-        border-bottom: 1px dotted #ccc;
-        padding: 15px 0;
-        flex-wrap: wrap;
+      .about-item {
+        margin-bottom: 25px;
       }
 
-      .label {
-        background-color: #f2a13a;
-        color: white;
-        font-size: 12px;
-        padding: 5px 10px;
-        border-radius: 3px;
-        margin-right: 15px;
-        white-space: nowrap;
-        margin-bottom: 5px;
+      .about-item h3 {
+        font-size: 18px;
+        color: #f25a3a;
+        margin-bottom: 10px;
+        border-left: 5px solid #f2a13a;
+        padding-left: 10px;
       }
 
-      .label.event {
-        background-color: #f25a3a;
-      }
-
-      .date {
-        font-size: 14px;
-        color: #666;
-        margin-right: 15px;
-        white-space: nowrap;
-        margin-bottom: 5px;
-      }
-
-      .title {
-        font-size: 16px;
+      .about-item p {
+        font-size: 15px;
         color: #333;
-        flex: 1;
-        min-width: 100px;
+        line-height: 1.7;
+        margin: 0;
       }
 
-      /* ✅ レスポンシブ対応：画面幅が600px以下なら縦並び */
       @media (max-width: 600px) {
-        .news-item {
-          flex-direction: column;
-          align-items: flex-start;
+        .about-item h3 {
+          font-size: 16px;
         }
 
-        .label,
-        .date {
-          margin-right: 0;
-        }
-
-        .title {
-          margin-top: 5px;
+        .about-item p {
+          font-size: 14px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="news-section">
-      <h2>お知らせ</h2>
+    <div class="about-section">
+      <h2>自己紹介</h2>
 
-      <div class="news-item">
-        <span class="label">その他</span>
-        <span class="date">2025年XX月XX日</span>
-        <span class="title">〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</span>
+      <div class="about-item">
+        <h3>名前</h3>
+        <p>山田 花子</p>
       </div>
 
-      <div class="news-item">
-        <span class="label">その他</span>
-        <span class="date">2025年XX月XX日</span>
-        <span class="title">保護者の皆様へお願い</span>
+      <div class="about-item">
+        <h3>経歴</h3>
+        <p>
+          システム開発会社にて、プログラマーおよびシステムエンジニアとして13年間勤務。
+        </p>
       </div>
 
-      <div class="news-item">
-        <span class="label">その他</span>
-        <span class="date">2025年XX月XX日</span>
-        <span class="title">〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</span>
+      <div class="about-item">
+        <h3>技術</h3>
+        <p>
+          Java、C#、VB.NET、VBAなど、いろんな言語を扱ってきました。「なんじゃそら？」と思われる方にも丁寧に説明します！
+        </p>
       </div>
 
-      <div class="news-item">
-        <span class="label event">募集</span>
-        <span class="date">2025年XX月XX日</span>
-        <span class="title">プログラミング教室生徒募集</span>
+      <div class="about-item">
+        <h3>得意なこと</h3>
+        <p>
+          Excel関数・マクロ、各種プログラミング言語のコーディング、パソコン操作全般。<br />
+          WordやPowerPointの操作も問題なし。スマホの知識は、一般的な若者レベルです。
+        </p>
       </div>
 
-      <div class="news-item">
-        <span class="label">New</span>
-        <span class="date">2025年06月01日</span>
-        <span class="title">サイトオープン</span>
+      <div class="about-item">
+        <h3>現在勉強中</h3>
+        <p>
+          生成AI、ホームページ作成（HTML/CSS など）を実践しながら習得中です。
+        </p>
+      </div>
+
+      <div class="about-item">
+        <h3>不得意なこと</h3>
+        <p>
+          高度な動画編集や画像編集、Photoshopなどのデザイン系ツールの扱いはまだまだ初心者レベルです。
+        </p>
+      </div>
+
+      <div class="about-item">
+        <h3>できないこと</h3>
+        <p>
+          パソコンやスマートフォンの修理など、ハードウェア系の対応はお受けできません。
+        </p>
+      </div>
+
+      <div class="about-item">
+        <h3>ひとこと</h3>
+        <p>
+          事務作業の業務効率化には自信があります。<br />
+          最新技術を駆使するスーパーマンではありませんが、13年の現場経験から得た“現場に効く”スキルを持っています。<br /><br />
+
+          あなたの「困った」に、わたしのスキルがフィットすれば、きっと有益なサポートができると思っています。<br /><br />
+
+          もし「役に立てなかったな…」と私自身が感じた場合、初回料金の返金も検討いたします。たとえば、パソコンの操作方法をご質問いただいたにも関わらず、明確な解決ができなかった場合など。<br />
+          お互いに誠実な関係を築けるよう、全力で対応いたします。
+        </p>
       </div>
     </div>
   </body>
