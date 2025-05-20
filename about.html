@@ -6,118 +6,129 @@
     <title>自己紹介</title>
     <style>
       body {
-        font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
-        background: #fffaf4;
+        font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+        background-color: #fffaf4;
         margin: 0;
         padding: 0;
+        color: #444;
       }
 
-      .about-section {
+      .container {
         max-width: 800px;
         margin: 50px auto;
-        padding: 40px 20px;
+        padding: 30px 20px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
-      .about-section h2 {
+      h2 {
         text-align: center;
-        font-size: 24px;
-        margin-bottom: 30px;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-      }
-
-      .about-item {
-        margin-bottom: 25px;
-      }
-
-      .about-item h3 {
-        font-size: 18px;
+        font-size: 26px;
         color: #f25a3a;
-        margin-bottom: 10px;
-        border-left: 5px solid #f2a13a;
-        padding-left: 10px;
+        margin-bottom: 30px;
       }
 
-      .about-item p {
-        font-size: 15px;
-        color: #333;
-        line-height: 1.7;
+      .section {
+        margin-bottom: 25px;
+        padding: 20px;
+        border-left: 5px solid #f2a13a;
+        background: #fff4e6;
+        border-radius: 10px;
+      }
+
+      .section h3 {
+        margin-top: 0;
+        font-size: 18px;
+        color: #d75b00;
+        margin-bottom: 10px;
+      }
+
+      .section p {
         margin: 0;
+        line-height: 1.8;
+      }
+
+      .balloon {
+        position: relative;
+        background: #fce8e6;
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: 40px;
+      }
+
+      .balloon::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 30px;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: #fce8e6;
+      }
+
+      .balloon p {
+        margin: 0;
+        color: #444;
       }
 
       @media (max-width: 600px) {
-        .about-item h3 {
-          font-size: 16px;
+        h2 {
+          font-size: 22px;
         }
 
-        .about-item p {
-          font-size: 14px;
+        .section h3 {
+          font-size: 16px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="about-section">
+    <div class="container">
       <h2>自己紹介</h2>
 
-      <div class="about-item">
+      <div class="section">
         <h3>名前</h3>
-        <p>山田 花子</p>
+        <p>みき のりこ</p>
       </div>
 
-      <div class="about-item">
+      <div class="section">
         <h3>経歴</h3>
         <p>
-          システム開発会社にて、プログラマーおよびシステムエンジニアとして13年間勤務。
+          システム開発会社にて13年間、プログラマー兼システムエンジニアとして勤務。<br />
+          Java、C#、VB.NET、VBAなど、、「なんじゃそら」な技術あり。
         </p>
       </div>
 
-      <div class="about-item">
-        <h3>技術</h3>
-        <p>
-          Java、C#、VB.NET、VBAなど、いろんな言語を扱ってきました。「なんじゃそら？」と思われる方にも丁寧に説明します！
-        </p>
-      </div>
-
-      <div class="about-item">
+      <div class="section">
         <h3>得意なこと</h3>
         <p>
-          Excel関数・マクロ、各種プログラミング言語のコーディング、パソコン操作全般。<br />
-          WordやPowerPointの操作も問題なし。スマホの知識は、一般的な若者レベルです。
+          Excel関数・マクロ、各種言語のプログラミング、Word、PowerPoint、パソコン操作全般。スマホもそれなりにOKです♪
         </p>
       </div>
 
-      <div class="about-item">
-        <h3>現在勉強中</h3>
-        <p>
-          生成AI、ホームページ作成（HTML/CSS など）を実践しながら習得中です。
-        </p>
+      <div class="section">
+        <h3>勉強中</h3>
+        <p>生成AI、ホームページ制作など、新しいことも少しずつ挑戦中！</p>
       </div>
 
-      <div class="about-item">
+      <div class="section">
         <h3>不得意なこと</h3>
-        <p>
-          高度な動画編集や画像編集、Photoshopなどのデザイン系ツールの扱いはまだまだ初心者レベルです。
-        </p>
+        <p>Photoshopなどのデザイン系ツールはまだまだ初心者レベルです。</p>
       </div>
 
-      <div class="about-item">
+      <div class="section">
         <h3>できないこと</h3>
-        <p>
-          パソコンやスマートフォンの修理など、ハードウェア系の対応はお受けできません。
-        </p>
+        <p>パソコンやスマホの物理的な修理など、ハード系の対応はできません…！</p>
       </div>
 
-      <div class="about-item">
-        <h3>ひとこと</h3>
+      <div class="balloon">
         <p>
-          事務作業の業務効率化には自信があります。<br />
-          最新技術を駆使するスーパーマンではありませんが、13年の現場経験から得た“現場に効く”スキルを持っています。<br /><br />
-
-          あなたの「困った」に、わたしのスキルがフィットすれば、きっと有益なサポートができると思っています。<br /><br />
-
-          もし「役に立てなかったな…」と私自身が感じた場合、初回料金の返金も検討いたします。たとえば、パソコンの操作方法をご質問いただいたにも関わらず、明確な解決ができなかった場合など。<br />
-          お互いに誠実な関係を築けるよう、全力で対応いたします。
+          最新技術をバリバリ使いこなすスーパーエンジニアではありませんが、<br />
+          13年間の実務経験から得た“ちょっとニッチだけど役立つ”技術があります。<br /><br />
+          もしご期待に添えなかったときは、初回料金の返金も検討しています。<br />
+          そんなドキドキの想いで、あなたの「困った」を一緒に解決していきたいです。
         </p>
       </div>
     </div>
