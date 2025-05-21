@@ -2,102 +2,207 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>自己紹介</title>
+    <title>自己紹介｜Pocket +Code｜土支田でゆるりとITサポート｜</title>
+    <meta
+      property="og:title"
+      content="自己紹介｜Pocket +Code｜土支田でゆるりとITサポート"
+    />
+    <meta
+      name="description"
+      content="練馬区土支田でプログラミング教室やITサポートをしています。"
+    />
+    <meta
+      property="og:description"
+      content="練馬区土支田でプログラミング教室やITサポートをしています。"
+    />
+
+    <meta property="og:url" content="https://doshida-pocketcode.netlify.app/about/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/PocketCodeBig.png" />
+    <meta property="og:site_name" content="Pocket +Code" />
+    <meta name="viewport" content="width=device-width, user-scalable = no" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+    ></script>
+
+    <script type="text/javascript" src="../js/home.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script type="text/javascript" src="js/jquery.matchHeight.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!--Webfont-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <meta name="robots" content="max-image-preview:large" />
     <style>
-      body {
-        font-family: "Kosugi Maru", sans-serif;
-        background-color: #fefcf6;
-        margin: 0;
-        padding: 0;
-        color: #333;
-      }
-
-      .container {
-        max-width: 840px;
-        margin: 50px auto;
-        padding: 30px 20px;
-        background: #ffffff;
-        border-radius: 25px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        border: 5px solid #f4a300;
-      }
-
-      h2 {
-        text-align: center;
-        font-size: 32px;
-        color: #ef6c00;
-        margin-bottom: 30px;
-      }
-
-      .section {
-        margin-bottom: 25px;
-        padding: 20px;
-        background: #e6f6f8;
-        border-left: 10px solid #00acc1;
-        border-radius: 20px;
-      }
-
-      .section h3 {
-        margin-top: 0;
-        font-size: 20px;
-        color: #007c91;
-        margin-bottom: 10px;
-      }
-
-      .section p {
-        margin: 0;
-        line-height: 1.8;
-      }
-
-      .balloon {
-        margin-top: 40px;
-        padding: 20px;
-        background: #fff3e0;
-        border-radius: 20px;
-        border-left: 10px solid #ffb300;
-        position: relative;
-      }
-
-      .balloon::after {
-        content: "";
-        position: absolute;
-        bottom: -15px;
-        left: 40px;
-        border: 15px solid transparent;
-        border-top-color: #fff3e0;
-      }
-
-      .balloon p {
-        margin: 0;
-        font-size: 15px;
-        color: #444;
-      }
-
-      @media (max-width: 600px) {
-        h2 {
-          font-size: 26px;
-        }
-        .section h3 {
-          font-size: 16px;
-        }
+      img:is([sizes="auto" i], [sizes^="auto," i]) {
+        contain-intrinsic-size: 3000px 1500px;
       }
     </style>
+    <style>
+        body {
+
+          background-color: #fdfaf7;
+          margin: 0;
+          padding: 0;
+          color: #333;
+        }
+  
+        .container {
+    max-width: 860px;
+    margin: 50px auto;
+    padding: 0 15px 60px;
+  }
+  
+        h2 {
+          text-align: center;
+          font-size: 30px;
+          color: #f06292;
+          margin-bottom: 30px;
+        }
+  
+        .section,
+        .highlight,
+        .case {
+          margin-bottom: 30px;
+          padding: 20px;
+          background: #e0f2f1;
+          border-radius: 15px;
+          opacity: 0;
+          transform: translateX(100px);
+          transition: all 0.8s ease-out;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+  
+        .highlight {
+          background: #fff8e1;
+          border-left: 8px solid #fbc02d;
+        }
+  
+        .case {
+          background: #fce4ec;
+          border-left: 8px solid #f06292;
+        }
+  
+        .show {
+          opacity: 1;
+          transform: translateX(0);
+        }
+  
+        .case h3 {
+          font-size: 20px;
+          color: #f06292;
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
+  
+        .section p {
+          margin: 0;
+          line-height: 1.8;
+        }
+  
+        .highlight h4 {
+          margin-top: 0;
+          color: #e65100;
+          font-size: 18px;
+        }
+  
+        .highlight ul {
+          padding-left: 1.2em;
+        }
+  
+        .highlight li {
+          margin-bottom: 10px;
+        }
+  
+        .case h4 {
+          margin-top: 0;
+          color: #ad1457;
+        }
+  
+        @media (max-width: 600px) {
+          h2 {
+            font-size: 24px;
+          }
+  
+          .case h3 {
+            font-size: 18px;
+          }
+        }
+      </style>
+
+    <meta name="generator" content="WordPress 6.8.1" />
+    <link rel="icon" href="images/PocketCodeMini.png" sizes="32x32" />
+    <link rel="icon" href="images/PocketCode.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/PocketCode.png" />
+    <meta name="msapplication-TileImage" content="images/PocketCode.png" />
   </head>
-  <body>
+  <body class="blog wp-theme-PC" id="pagetop">
+    
+    <!--Header-->
+    <header>
+      <div class="toggle"><span></span><span></span><span></span></div>
+      <div id="menu">
+        <div class="navi_area">
+          <div class="navi">
+            <ul class="main">
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/"
+                  ><span class="link_line">ホーム</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/about/"
+                  ><span class="link_line">自己紹介</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/programming/"
+                  ><span class="link_line">プログラミング教室</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/itsupport/"
+                  ><span class="link_line">ITサポート</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/contact/"
+                  ><span class="link_line">お問い合わせ</span></a
+                >
+              </li>
+
+            </ul>
+          </div>
+          <!--navi-->
+        </div>
+        <!--navi_area-->
+      </div>
+      <!--menu-->
+    </header>
+
     <div class="container">
       <h2>自己紹介</h2>
 
-      <div class="section">
+      <div class="case">
         <h3>名前</h3>
         <p>みき のりこ</p>
       </div>
 
-      <div class="section">
+      <div class="case">
         <h3>経歴</h3>
         <p>
           システム開発会社にて13年間、プログラマー兼システムエンジニアとして勤務。<br />
@@ -105,36 +210,64 @@
         </p>
       </div>
 
-      <div class="section">
+      <div class="case">
         <h3>得意なこと</h3>
         <p>
-          Excel関数・マクロ、各種言語のプログラミング、Word、PowerPoint、パソコン操作全般。スマホもそれなりにOKです♪
+          Excel関数・マクロ、各種言語のプログラミング、Word、PowerPoint、パソコン操作全般。<br />
+          スマホスキルはその辺を歩いてる若者レベルです♪
         </p>
       </div>
 
-      <div class="section">
+      <div class="case">
         <h3>勉強中</h3>
-        <p>生成AI、ホームページ制作など、新しいことも少しずつ挑戦中！</p>
+        <p>生成AI、ホームページ制作など、新しいことも少しずつ挑戦中！<br />
+           初めて作ったホームページがこのPocket +Codeのページです。
+        </p>
       </div>
 
-      <div class="section">
+      <div class="case">
         <h3>不得意なこと</h3>
-        <p>Photoshopなどのデザイン系ツールはまだまだ初心者レベルです。</p>
+        <p>Photoshopなどのデザイン系ツールは残念ながら初心者レベル。</p>
       </div>
 
-      <div class="section">
+      <div class="case">
         <h3>できないこと</h3>
-        <p>パソコンやスマホの物理的な修理など、ハード系の対応はできません…！</p>
+        <p>パソコンやスマホの物理的な修理など、ハード系の対応はできません…！<br />
+          あくまでソフト系専門です。
+        </p>
       </div>
 
-      <div class="balloon">
+      <div class="highlight">
         <p>
           最新技術をバリバリ使いこなすスーパーエンジニアではありませんが、<br />
           13年間の実務経験から得た“ちょっとニッチだけど役立つ”技術があります。<br /><br />
-          もしご期待に添えなかったときは、初回料金の返金も検討しています。<br />
-          そんなドキドキの想いで、あなたの「困った」を一緒に解決していきたいです。
+          思い付きで始めたこの Pocket +Code 果たして誰かの役に立てるのか？<br />
+          そんなドキドキの想いでゆるりゆるりと始めます💻
         </p>
       </div>
     </div>
+
+  
+      <script>
+        // スクロールで表示アニメーション
+        const targets = document.querySelectorAll('.section, .highlight, .case');
+  
+        const callback = (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target); // 一度だけ表示するならこれ
+            }
+          });
+        };
+  
+        const observer = new IntersectionObserver(callback, {
+          threshold: 0.1
+        });
+  
+        targets.forEach(target => observer.observe(target));
+      </script>
+    
+
   </body>
 </html>

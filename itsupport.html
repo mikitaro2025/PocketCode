@@ -2,159 +2,276 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ITサポートサービス</title>
+    <title>ITサポート｜Pocket +Code｜土支田でゆるりとITサポート｜</title>
+    <meta
+      property="og:title"
+      content="ITサポート｜Pocket +Code｜土支田でゆるりとITサポート"
+    />
+    <meta
+      name="description"
+      content="練馬区土支田でプログラミング教室やITサポートをしています。"
+    />
+    <meta
+      property="og:description"
+      content="練馬区土支田でプログラミング教室やITサポートをしています。"
+    />
+
+    <meta property="og:url" content="https://doshida-pocketcode.netlify.app/itsupport/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/PocketCodeBig.png" />
+    <meta property="og:site_name" content="Pocket +Code" />
+    <meta name="viewport" content="width=device-width, user-scalable = no" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+    ></script>
+
+    <script type="text/javascript" src="../js/home.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script type="text/javascript" src="js/jquery.matchHeight.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!--Webfont-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <meta name="robots" content="max-image-preview:large" />
     <style>
-      body {
-        font-family: "Kosugi Maru", sans-serif;
-        background-color: #fdfaf7;
-        margin: 0;
-        padding: 0;
-        color: #333;
-      }
-
-      .container {
-        max-width: 860px;
-        margin: 50px auto;
-        padding: 30px 25px;
-        background: #ffffff;
-        border-radius: 20px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-        border-left: 10px solid #4db6ac;
-      }
-
-      h2 {
-        text-align: center;
-        font-size: 30px;
-        color: #00796b;
-        margin-bottom: 30px;
-      }
-
-      .section {
-        margin-bottom: 30px;
-        padding: 20px;
-        background: #e0f2f1;
-        border-radius: 15px;
-      }
-
-      .section h3 {
-        font-size: 20px;
-        color: #00695c;
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
-
-      .section p {
-        margin: 0;
-        line-height: 1.8;
-      }
-
-      .highlight {
-        background: #fff8e1;
-        border-left: 8px solid #fbc02d;
-        padding: 20px;
-        border-radius: 15px;
-        margin-top: 30px;
-      }
-
-      .highlight h4 {
-        margin-top: 0;
-        color: #e65100;
-        font-size: 18px;
-      }
-
-      .highlight ul {
-        padding-left: 1.2em;
-      }
-
-      .highlight li {
-        margin-bottom: 10px;
-      }
-
-      .case {
-        margin-top: 30px;
-        padding: 20px;
-        background: #fce4ec;
-        border-left: 8px solid #f06292;
-        border-radius: 15px;
-      }
-
-      .case h4 {
-        margin-top: 0;
-        color: #ad1457;
-      }
-
-      @media (max-width: 600px) {
-        h2 {
-          font-size: 24px;
-        }
-
-        .section h3 {
-          font-size: 18px;
-        }
+      img:is([sizes="auto" i], [sizes^="auto," i]) {
+        contain-intrinsic-size: 3000px 1500px;
       }
     </style>
+    <style>
+        body {
+
+          background-color: #fdfaf7;
+          margin: 0;
+          padding: 0;
+          color: #333;
+        }
+  
+        .container {
+    max-width: 860px;
+    margin: 50px auto;
+    padding: 0 15px 60px;
+  }
+  
+        h2 {
+          text-align: center;
+          font-size: 30px;
+          color: #00796b;
+          margin-bottom: 30px;
+        }
+  
+        .section,
+        .highlight,
+        .case {
+          margin-bottom: 30px;
+          padding: 20px;
+          background: #e0f2f1;
+          border-radius: 15px;
+          opacity: 0;
+          transform: translateX(100px);
+          transition: all 0.8s ease-out;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+  
+        .highlight {
+          background: #fff8e1;
+          border-left: 8px solid #fbc02d;
+        }
+  
+        .case {
+          background: #fce4ec;
+          border-left: 8px solid #f06292;
+        }
+  
+        .show {
+          opacity: 1;
+          transform: translateX(0);
+        }
+  
+        .section h3 {
+          font-size: 20px;
+          color: #00695c;
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
+  
+        .section p {
+          margin: 0;
+          line-height: 1.8;
+        }
+  
+        .highlight h4 {
+          margin-top: 0;
+          color: #e65100;
+          font-size: 18px;
+        }
+  
+        .highlight ul {
+          padding-left: 1.2em;
+        }
+  
+        .highlight li {
+          margin-bottom: 10px;
+        }
+  
+        .case h4 {
+          margin-top: 0;
+          color: #ad1457;
+        }
+  
+        @media (max-width: 600px) {
+          h2 {
+            font-size: 24px;
+          }
+  
+          .section h3 {
+            font-size: 18px;
+          }
+        }
+      </style>
+
+    <meta name="generator" content="WordPress 6.8.1" />
+    <link rel="icon" href="images/PocketCodeMini.png" sizes="32x32" />
+    <link rel="icon" href="images/PocketCode.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/PocketCode.png" />
+    <meta name="msapplication-TileImage" content="images/PocketCode.png" />
   </head>
-  <body>
+  <body class="blog wp-theme-PC" id="pagetop">
+    
+    <!--Header-->
+    <header>
+      <div class="toggle"><span></span><span></span><span></span></div>
+      <div id="menu">
+        <div class="navi_area">
+          <div class="navi">
+            <ul class="main">
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/"
+                  ><span class="link_line">ホーム</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/about/"
+                  ><span class="link_line">自己紹介</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/programming/"
+                  ><span class="link_line">プログラミング教室</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/itsupport/"
+                  ><span class="link_line">ITサポート</span></a
+                >
+              </li>
+              <li>
+                <a href="https://doshida-pocketcode.netlify.app/contact/"
+                  ><span class="link_line">お問い合わせ</span></a
+                >
+              </li>
+
+            </ul>
+          </div>
+          <!--navi-->
+        </div>
+        <!--navi_area-->
+      </div>
+      <!--menu-->
+    </header>
+
     <div class="container">
-      <h2>大人のための ITサポート</h2>
-
-      <div class="section">
-        <h3>💻 対面サポートについて</h3>
-        <p>
-          初回30分 500円でご相談を承ります。<br />
-          事前にメールなどでご要望をお伝えいただけると、当日のお時間をより有効に使えるかもしれません。
-        </p>
+        <h2>ITサポート</h2>
+  
+        <div class="section">
+          <h3>💻 サポートについて</h3>
+          <p>
+            初回30分 500円でご相談を承ります。<br />
+            事前にお問い合わせからご要望の詳細をお伝えいただけると、当日のお時間をより有効に使えるかもしれません。<br />
+            ご紹介だともっと安くなります。
+          </p>
+        </div>
+  
+        <div class="section">
+          <h3>📅 継続サポート</h3>
+          <p>初回以降は、30分ごとに1,000円でご相談いただけます。</p>
+        </div>
+  
+        <div class="section">
+          <h3>🛠️ 作業依頼（マクロ作成、HP作成など）</h3>
+          <p>
+            Excelマクロの作成・修正なども可能です。<br />
+            HP作成は簡単なものになりますが、安くできるようにご希望に沿います。<br />
+            内容をヒアリングの上、作業時間に応じてお見積りいたします。
+          </p>
+          <p style="margin-top: 10px;">
+            例：1時間の作業 → 2,000円<br />
+            4時間相当の作業 → 8,000円
+          </p>
+        </div>
+  
+        <div class="section">
+          <h3>🌐 オンライン対応について</h3>
+          <p>現在、オンラインでのサポート環境を整備中です。今後ご案内できる予定です。</p>
+        </div>
+  
+        <div class="highlight">
+          <h4>🔍 例えばこんなご相談</h4>
+          <ul>
+            <li>Excelの関数がうまく使いこなせない！</li>
+            <li>やりたいことのイメージはあるけど方法がわからない</li>
+            <li>何ができるかすら分からないけど相談してみたい</li>
+            <li>事務作業を効率化する方法を知りたい</li>
+            <li>ChatGPTを使ってみたい・仕事に活かせる？？</li>
+            <li>スマホの操作について（シニアの方向けかなと）</li>
+          </ul>
+        </div>
+  
+        <div class="case">
+          <h4>💡 実際のお手伝い事例</h4>
+          <p>
+            事務仕事で大量のフォルダを作成する必要があり、ひとつずつ新規作成する作業が大変でした。<br />
+            ➡️フォルダを一括で作成できるコマンドの使い方をご提案。作業が一瞬で完了しました！<br /><br />
+            お弁当の注文をメールで受けているが、メールの返信が大変でした。<br />
+            ➡️Googleフォームをカスタムして自動メール返信＆注文数をチェックして上限にて自動受付停止を実現！<br /><br />
+          </p>
+        </div>
       </div>
+  
+      <script>
+        // スクロールで表示アニメーション
+        const targets = document.querySelectorAll('.section, .highlight, .case');
+  
+        const callback = (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target); // 一度だけ表示するならこれ
+            }
+          });
+        };
+  
+        const observer = new IntersectionObserver(callback, {
+          threshold: 0.1
+        });
+  
+        targets.forEach(target => observer.observe(target));
+      </script>
+    
 
-      <div class="section">
-        <h3>📅 継続サポート</h3>
-        <p>初回30分以降は、30分ごとに1,000円でご相談いただけます。</p>
-      </div>
-
-      <div class="section">
-        <h3>🛠️ 作業依頼（マクロなど）</h3>
-        <p>
-          Excelマクロの作成・修正なども可能です。<br />
-          内容をヒアリングの上、作業時間に応じてお見積りいたします。
-        </p>
-        <p style="margin-top: 10px">
-          例：1時間の作業 → 2,000円<br />
-          4時間相当の作業 → 8,000円
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>🌐 オンライン対応について</h3>
-        <p>
-          現在、オンラインでのサポート環境を整備中です。今後ご案内できる予定です。
-        </p>
-      </div>
-
-      <div class="highlight">
-        <h4>🔍 こんなご相談に対応しています</h4>
-        <ul>
-          <li>Excelの関数がうまく使いこなせない！</li>
-          <li>やりたいことのイメージはあるけど方法がわからない</li>
-          <li>何ができるかすら分からないけど相談してみたい</li>
-          <li>事務作業を効率化する方法を知りたい</li>
-          <li>ChatGPTを使ってみたい・仕事に活かしたい</li>
-          <li>スマホの操作について（シニアの方も歓迎）</li>
-        </ul>
-      </div>
-
-      <div class="case">
-        <h4>💡 実際のお手伝い事例</h4>
-        <p>
-          お仕事で大量のフォルダを作成する必要があり、ひとつずつ新規作成する作業が大変でした。<br />
-          →
-          フォルダを一括で作成できるコマンドの使い方をご提案。作業が一瞬で完了しました！
-        </p>
-      </div>
-    </div>
   </body>
 </html>

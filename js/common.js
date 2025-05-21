@@ -26,60 +26,6 @@ $(window).on("load", function () {
   }, 100);
 });
 
-//-----------------------------------------------------------------
-//	Scroll anime
-//-----------------------------------------------------------------
-
-/*
-$(window).on('load', function() {
-$('.fade').each(function(){
-var scroll = $(window).scrollTop();
-var windowHeight = $(window).height();
-var imgPos = $(this).offset().top;
-if (scroll > imgPos - windowHeight + 200){
-    $(this).addClass('show');
-}
-});
-});
-*/
-
-/*
-
-$(function(){
-
-$(window).scroll(function (){
-
-windowW = $(window).width();
-
-if(windowW > 768){
-var showP = 300;
-} else {
-var showP = 50;
-}
-
-$('.ph_random').each(function(){
-var scroll = $(window).scrollTop();
-var windowHeight = $(window).height();
-var imgPos = $(this).offset().top;
-if (scroll > imgPos - windowHeight + showP){
-	
-  var s = $('.ph_random li');
-  s.each(function(i){
-    var t = $(this);
-    t.delay(200*i).queue(function() {
-      $(this).addClass('show').dequeue();
-    });
-  });
-  
-} else if(scroll < imgPos - windowHeight) {
-	 $('.ph_random li').removeClass('show');
-}
-});
-
-});
-
-});
-*/
 
 $(function () {
   $(window).scroll(function () {
