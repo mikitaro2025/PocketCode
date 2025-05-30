@@ -16,7 +16,10 @@
       content="練馬区土支田でプログラミング教室やITサポートをしています。"
     />
 
-    <meta property="og:url" content="https://doshida-pocketcode.netlify.app/itsupport/" />
+    <meta
+      property="og:url"
+      content="https://doshida-pocketcode.netlify.app/itsupport/"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/PocketCodeBig.png" />
@@ -53,96 +56,95 @@
       }
     </style>
     <style>
-        body {
+      body {
+        background-color: #fdfaf7;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
 
-          background-color: #fdfaf7;
-          margin: 0;
-          padding: 0;
-          color: #333;
-        }
-  
-        .container {
-    max-width: 860px;
-    margin: 50px auto;
-    padding: 0 15px 60px;
-  }
-  
+      .container {
+        max-width: 860px;
+        margin: 50px auto;
+        padding: 0 15px 60px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #00796b;
+        margin-bottom: 30px;
+      }
+
+      .section,
+      .highlight,
+      .case {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #e0f2f1;
+        border-radius: 15px;
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.8s ease-out;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+
+      .highlight {
+        background: #fff8e1;
+        border-left: 8px solid #fbc02d;
+      }
+
+      .case {
+        background: #fce4ec;
+        border-left: 8px solid #f06292;
+      }
+
+      .show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .section h3 {
+        font-size: 20px;
+        color: #00695c;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .section p {
+        margin: 0;
+        line-height: 1.8;
+      }
+
+      .highlight h4 {
+        margin-top: 0;
+        color: #e65100;
+        font-size: 18px;
+      }
+
+      .highlight ul {
+        padding-left: 1.2em;
+      }
+
+      .highlight li {
+        margin-bottom: 10px;
+      }
+
+      .case h4 {
+        margin-top: 0;
+        color: #ad1457;
+      }
+
+      @media (max-width: 600px) {
         h2 {
-          text-align: center;
-          font-size: 30px;
-          color: #00796b;
-          margin-bottom: 30px;
+          font-size: 24px;
         }
-  
-        .section,
-        .highlight,
-        .case {
-          margin-bottom: 30px;
-          padding: 20px;
-          background: #e0f2f1;
-          border-radius: 15px;
-          opacity: 0;
-          transform: translateX(100px);
-          transition: all 0.8s ease-out;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-        }
-  
-        .highlight {
-          background: #fff8e1;
-          border-left: 8px solid #fbc02d;
-        }
-  
-        .case {
-          background: #fce4ec;
-          border-left: 8px solid #f06292;
-        }
-  
-        .show {
-          opacity: 1;
-          transform: translateX(0);
-        }
-  
+
         .section h3 {
-          font-size: 20px;
-          color: #00695c;
-          margin-top: 0;
-          margin-bottom: 10px;
-        }
-  
-        .section p {
-          margin: 0;
-          line-height: 1.8;
-        }
-  
-        .highlight h4 {
-          margin-top: 0;
-          color: #e65100;
           font-size: 18px;
         }
-  
-        .highlight ul {
-          padding-left: 1.2em;
-        }
-  
-        .highlight li {
-          margin-bottom: 10px;
-        }
-  
-        .case h4 {
-          margin-top: 0;
-          color: #ad1457;
-        }
-  
-        @media (max-width: 600px) {
-          h2 {
-            font-size: 24px;
-          }
-  
-          .section h3 {
-            font-size: 18px;
-          }
-        }
-      </style>
+      }
+    </style>
 
     <meta name="generator" content="WordPress 6.8.1" />
     <link rel="icon" href="images/PocketCodeMini.png" sizes="32x32" />
@@ -151,7 +153,6 @@
     <meta name="msapplication-TileImage" content="images/PocketCode.png" />
   </head>
   <body class="blog wp-theme-PC" id="pagetop">
-    
     <!--Header-->
     <header>
       <div class="toggle"><span></span><span></span><span></span></div>
@@ -184,7 +185,6 @@
                   ><span class="link_line">お問い合わせ</span></a
                 >
               </li>
-
             </ul>
           </div>
           <!--navi-->
@@ -195,100 +195,130 @@
     </header>
 
     <div class="container">
-        <h2>ITサポート</h2>
-  
-        <div class="section">
-          <h3>📱💻 スマホ・パソコンのサポートです</h3>
-          <p>
-            シニア向けにはスマホのサポートも承ります。<br />
-            　💬LINEの使い方<br />
-            　💬基本的な操作や、困ったときの問い合わせ<br />
-            パソコンを使う作業のありとあらゆることを相談してみて下さい。<br />
-            　💬Excelで分からないところがあるから教えてほしい<br />
-            　💬マクロでやりたいこんなことやあんなことを丸投げしたい<br />
-            　💬簡単なホームページを作ってほしい<br />
-            　💬chatGPTを使ってみたい<br />
-            　💬AIを使った業務の効率化って例えばどんなこと？<br />
-          </p>
-        </div>
-        
-        <div class="section">
-          <h3>💰 サポート依頼</h3>
-          <p>
-            平日10:00～17:00で、この時間外は応相談となります。<br /><br />
-            初回30分 500円でご相談を承ります。<br />
-            初回以降は30分ごとに1,000円で引き続きサポートいたします。<br /><br />
-            事前にお問い合わせからご要望の詳細をお伝えいただけるとスムーズです。<br />
-            ご紹介だともっと安くなります。
-          </p>
-        </div>
+      <h2>ITサポート</h2>
 
-        <div class="section">
-          <h3>📅 継続サポート</h3>
-          <p>疑問が出たときにパッと聞きたいなど、ご要望があれば月額制など検討します。</p>
-        </div>
-  
-        <div class="section">
-          <h3>🛠️ 作業依頼（マクロ作成、HP作成など）</h3>
-          <p>
-            Excelマクロ等プログラムの作成・修正なども可能です。<br />
-            内容をヒアリングの上、作業時間に応じてお見積りいたします。<br />
-            HP作成は簡単なものになりますが、安くできるようにご希望に沿います。<br />
-            どうぞまずはお問い合わせください。
-          </p>
-          <p style="margin-top: 10px;">
-            作業時間コスト  2,000円／時間<br />
-            例：4時間相当の作業 → 8,000円
-          </p>
-        </div>
-    
-        <div class="highlight">
-          <h3>🤝 サポート場所</h3>
-          <p>
-            ご自宅や事務所へ伺って普段作業しているパソコンでサポートできます。<br />
-            自宅はちょっと、、という方は光が丘IMAのカフェやファミレスでも大丈夫です。<br />
-            その際にノートパソコンやスマホをご持参頂くか、私のノートパソコンを使って相談をお受けします。
-          </p>
-        </div>
+      <div class="section">
+        <h3>📱💻 スマホ・パソコンのサポートです</h3>
+        <p>
+          <span style="color: blue">‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥</span><br />
+          シニア向けにはスマホのサポート<br />
+          　💬LINEの使い方<br />
+          　💬基本的な操作や、困ったときの問い合わせ<br />
+          <span style="color: blue">‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥</span><br />
+          パソコンを使う作業のありとあらゆること<br />
+          　💬Excelで分からないところがあるから教えてほしい<br />
+          　💬マクロの使い方を教えてほしい<br />
+          　💬chatGPTを使ってみたい<br />
+          　💬業務効率化って何ができるの？<br />
+        </p>
+        <p>
+          <br />
+          <strong>対応時間：</strong><br />
+          平日 10:00〜17:00<br />
+          ※上記時間外はご相談ください。<br /><br />
 
-        <div class="highlight">
-          <h3>🌐 オンライン対応について</h3>
-          <p>現在、オンラインでのサポート環境を整備中です。今後ご案内できる予定です。<br />
-            ご要望頂ければ、環境整備にもっとパワーを注ぎます。</p>
-        </div>
-        <div class="case">
-          <h4>💡 実際のお手伝い事例</h4>
-          <p>
-            事務仕事で大量のフォルダを作成する必要があり、ひとつずつ新規作成する作業が大変でした。<br />
-            ➡️フォルダを一括で作成できるコマンドの使い方をご提案。作業が一瞬で完了！<br /><br />
-            お弁当の注文をメールで受けているが、メールの返信が大変でした。<br />
-            ➡️Googleフォームをカスタムして自動メール返信＆注文数をチェックして上限にて自動受付停止を実現！<br /><br />
-          </p>
-        </div>
-
-  
+          <strong>料金：</strong>
+        </p>
+        <table border="1" cellpadding="5" cellspacing="0">
+          <tr>
+            <th>内容</th>
+            <th>料金（税込）</th>
+          </tr>
+          <tr>
+            <td>初回相談（30分）</td>
+            <td>500円</td>
+          </tr>
+          <tr>
+            <td>2回目以降（30分ごと）</td>
+            <td>1,000円</td>
+          </tr>
+        </table>
+        <p>
+          <br />
+          ご紹介だともっとお安くなります。<br />
+          ご相談の前に、<strong>お問い合わせフォーム</strong>からご要望の内容をお伝えいただくとスムーズです。
+        </p>
       </div>
-  
-      <script>
-        // スクロールで表示アニメーション
-        const targets = document.querySelectorAll('.section, .highlight, .case');
-  
-        const callback = (entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('show');
-              observer.unobserve(entry.target); // 一度だけ表示するならこれ
-            }
-          });
-        };
-  
-        const observer = new IntersectionObserver(callback, {
-          threshold: 0.1
-        });
-  
-        targets.forEach(target => observer.observe(target));
-      </script>
-    
 
+      <div class="section">
+        <h3>📅 継続サポート</h3>
+        <p>
+          疑問が出たときにパッと聞きたいなど、ご要望があれば月額制など検討します。
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>🛠️ 作成依頼</h3>
+        <p>
+          <span style="color: blue">‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥</span><br />
+          Excelマクロなどプログラム作成・修正<br />
+          　💬内容のヒアリング・お見積りは無料<br />
+          　💬単純な作業はなんでも自動化できます<br />
+          　💬ご紹介割引あります<br />
+          <span style="color: blue">‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥</span><br />
+          ホームページの作成<br />
+          　💬ご相談は無料<br />
+          　💬作成費用5万円ほど<br />
+          　💬デザインはサンプルから選択<br />
+          　💬ドメイン取得は追加料金発生かも？<br />
+          　💬運用費は相談で都度払いか月額制<br />
+          　💬ご紹介特典あります<br />
+        </p>
+        <p style="margin-top: 10px">
+          作業時間コスト 2,000円／時間<br />
+          例：4時間相当の作業 → 8,000円
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h3>🤝 サポート場所</h3>
+        <p>
+          ご自宅や事務所へ伺って普段作業しているパソコンでサポートできます。<br />
+          自宅はちょっと、、という方は光が丘IMAのカフェやファミレスでも大丈夫です。<br />
+          その際にノートパソコンやスマホをご持参頂くか、私のノートパソコンを使って相談をお受けします。
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h3>🌐 オンライン対応について</h3>
+        <p>
+          【作成依頼】は対面なしで完結させることも可能です。<br />
+          【サポート】については現在、zoomなどのオンラインでのサポート環境を検討中です。<br />
+          ご要望頂ければ、環境整備にもっとパワーを注ぎます。
+        </p>
+      </div>
+      <div class="case">
+        <h4>💡 実際の事例</h4>
+        <p>
+          <span style="color: red;">‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥</span><br />
+          事務仕事で大量のフォルダを作成する必要があり、ひとつずつ新規作成する作業が大変でした。<br /><br />
+          ➡️フォルダを一括で作成できるコマンドの使い方をご提案。1日かかるかと思った作業が一瞬で完了！<br /><br />
+          <span style="color: red;">‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥</span><br />
+          お弁当の注文をメールで受けているが、メールの返信が大変でした。<br /><br />
+          ➡️Googleフォームをカスタムして自動メール返信＆注文数をチェックして上限にて自動受付停止を実現！<br />
+          さらに注文内容を独自の表形式に整理する作業もボタン一つで自動化！<br /><br />
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // スクロールで表示アニメーション
+      const targets = document.querySelectorAll(".section, .highlight, .case");
+
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); // 一度だけ表示するならこれ
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, {
+        threshold: 0.1,
+      });
+
+      targets.forEach((target) => observer.observe(target));
+    </script>
   </body>
 </html>

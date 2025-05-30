@@ -16,7 +16,10 @@
       content="練馬区土支田でプログラミング教室やITサポートをしています。"
     />
 
-    <meta property="og:url" content="https://doshida-pocketcode.netlify.app/about/" />
+    <meta
+      property="og:url"
+      content="https://doshida-pocketcode.netlify.app/about/"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/PocketCodeBig.png" />
@@ -53,96 +56,95 @@
       }
     </style>
     <style>
-        body {
+      body {
+        background-color: #fdfaf7;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
 
-          background-color: #fdfaf7;
-          margin: 0;
-          padding: 0;
-          color: #333;
-        }
-  
-        .container {
-    max-width: 860px;
-    margin: 50px auto;
-    padding: 0 15px 60px;
-  }
-  
+      .container {
+        max-width: 860px;
+        margin: 50px auto;
+        padding: 0 15px 60px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #f06292;
+        margin-bottom: 30px;
+      }
+
+      .section,
+      .highlight,
+      .case {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #e0f2f1;
+        border-radius: 15px;
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.8s ease-out;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+
+      .highlight {
+        background: #fff8e1;
+        border-left: 8px solid #fbc02d;
+      }
+
+      .case {
+        background: #fce4ec;
+        border-left: 8px solid #f06292;
+      }
+
+      .show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .case h3 {
+        font-size: 20px;
+        color: #f06292;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .section p {
+        margin: 0;
+        line-height: 1.8;
+      }
+
+      .highlight h4 {
+        margin-top: 0;
+        color: #e65100;
+        font-size: 18px;
+      }
+
+      .highlight ul {
+        padding-left: 1.2em;
+      }
+
+      .highlight li {
+        margin-bottom: 10px;
+      }
+
+      .case h4 {
+        margin-top: 0;
+        color: #ad1457;
+      }
+
+      @media (max-width: 600px) {
         h2 {
-          text-align: center;
-          font-size: 30px;
-          color: #f06292;
-          margin-bottom: 30px;
+          font-size: 24px;
         }
-  
-        .section,
-        .highlight,
-        .case {
-          margin-bottom: 30px;
-          padding: 20px;
-          background: #e0f2f1;
-          border-radius: 15px;
-          opacity: 0;
-          transform: translateX(100px);
-          transition: all 0.8s ease-out;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-        }
-  
-        .highlight {
-          background: #fff8e1;
-          border-left: 8px solid #fbc02d;
-        }
-  
-        .case {
-          background: #fce4ec;
-          border-left: 8px solid #f06292;
-        }
-  
-        .show {
-          opacity: 1;
-          transform: translateX(0);
-        }
-  
+
         .case h3 {
-          font-size: 20px;
-          color: #f06292;
-          margin-top: 0;
-          margin-bottom: 10px;
-        }
-  
-        .section p {
-          margin: 0;
-          line-height: 1.8;
-        }
-  
-        .highlight h4 {
-          margin-top: 0;
-          color: #e65100;
           font-size: 18px;
         }
-  
-        .highlight ul {
-          padding-left: 1.2em;
-        }
-  
-        .highlight li {
-          margin-bottom: 10px;
-        }
-  
-        .case h4 {
-          margin-top: 0;
-          color: #ad1457;
-        }
-  
-        @media (max-width: 600px) {
-          h2 {
-            font-size: 24px;
-          }
-  
-          .case h3 {
-            font-size: 18px;
-          }
-        }
-      </style>
+      }
+    </style>
 
     <meta name="generator" content="WordPress 6.8.1" />
     <link rel="icon" href="images/PocketCodeMini.png" sizes="32x32" />
@@ -151,7 +153,6 @@
     <meta name="msapplication-TileImage" content="images/PocketCode.png" />
   </head>
   <body class="blog wp-theme-PC" id="pagetop">
-    
     <!--Header-->
     <header>
       <div class="toggle"><span></span><span></span><span></span></div>
@@ -184,7 +185,6 @@
                   ><span class="link_line">お問い合わせ</span></a
                 >
               </li>
-
             </ul>
           </div>
           <!--navi-->
@@ -220,8 +220,9 @@
 
       <div class="case">
         <h3>勉強中</h3>
-        <p>生成AI、ホームページ制作など<br />
-           初めて作ったホームページがこのPocket +Codeのページです。
+        <p>
+          生成AI、ホームページ作成など<br />
+          初めて作ったホームページがこのPocket +Codeのページです。
         </p>
       </div>
 
@@ -232,7 +233,8 @@
 
       <div class="case">
         <h3>できないこと</h3>
-        <p>パソコンやスマホの物理的な修理など、ハード系の対応はできません…！<br />
+        <p>
+          パソコンやスマホの物理的な修理など、ハード系の対応はできません…！<br />
           ソフト系の専門です。
         </p>
       </div>
@@ -244,32 +246,29 @@
           さらにもっといろんな人に生成AIに触れてほしい！<br />
           進化したAIに自分が感動したように、それを周りの人にも伝えたいという思いが強めです。<br /><br />
           思い付きで始めたこの Pocket +Code 果たして誰かの役に立てるのか？<br />
-          そんなドキドキの想いでゆるりゆるりと始めます💻
+          ドキドキしつつもゆるゆると始めます💻
         </p>
       </div>
     </div>
 
-  
-      <script>
-        // スクロールで表示アニメーション
-        const targets = document.querySelectorAll('.section, .highlight, .case');
-  
-        const callback = (entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('show');
-              observer.unobserve(entry.target); // 一度だけ表示するならこれ
-            }
-          });
-        };
-  
-        const observer = new IntersectionObserver(callback, {
-          threshold: 0.1
-        });
-  
-        targets.forEach(target => observer.observe(target));
-      </script>
-    
+    <script>
+      // スクロールで表示アニメーション
+      const targets = document.querySelectorAll(".section, .highlight, .case");
 
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); // 一度だけ表示するならこれ
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, {
+        threshold: 0.1,
+      });
+
+      targets.forEach((target) => observer.observe(target));
+    </script>
   </body>
 </html>

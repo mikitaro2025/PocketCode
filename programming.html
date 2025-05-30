@@ -2,7 +2,9 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>プログラミング教室｜Pocket +Code｜土支田でゆるりとITサポート｜</title>
+    <title>
+      プログラミング教室｜Pocket +Code｜土支田でゆるりとITサポート｜
+    </title>
     <meta
       property="og:title"
       content="プログラミング教室｜Pocket +Code｜土支田でゆるりとITサポート"
@@ -16,7 +18,10 @@
       content="練馬区土支田でプログラミング教室やITサポートをしています。"
     />
 
-    <meta property="og:url" content="https://doshida-pocketcode.netlify.app/programming/" />
+    <meta
+      property="og:url"
+      content="https://doshida-pocketcode.netlify.app/programming/"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/PocketCodeBig.png" />
@@ -53,86 +58,85 @@
       }
     </style>
     <style>
-        body {
+      body {
+        background-color: #fdfaf7;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
 
-          background-color: #fdfaf7;
-          margin: 0;
-          padding: 0;
-          color: #333;
-        }
-  
-        .container {
-    max-width: 860px;
-    margin: 150px auto;       /*工事中が終わったら上部の余白は150⇒50に戻す*/
-    padding: 0 15px 60px;
-  }
-  
-        h2 {
-          text-align: center;
-          font-size: 30px;
-          color: #e65100;
-          margin-bottom: 30px;
-        }
-  
-        .section,
-        .highlight,
-        .case {
-          margin-bottom: 30px;
-          padding: 20px;
-          border-radius: 15px;
-          opacity: 0;
-          transform: translateX(100px);
-          transition: all 0.8s ease-out;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-          background: #fff8e1;
-        }
-  
-        .highlight {
-          background: #fff8e1;
-          border-left: 8px solid #fbc02d;
-        }
-  
-        .case {
-          background: #fce4ec;
-          border-left: 8px solid #f06292;
-        }
-  
-        .show {
-          opacity: 1;
-          transform: translateX(0);
-        }
-  
-        .section h3 {
-          font-size: 20px;
-          color: #e65100;
-          margin-top: 0;
-          margin-bottom: 10px;
-        }
-  
-        .section p {
-          margin: 0;
-          line-height: 1.8;
-        }
-  
-        .highlight h4 {
-          margin-top: 0;
-          color: #e65100;
-          font-size: 18px;
-        }
-  
-        .highlight ul {
-          padding-left: 1.2em;
-        }
-  
-        .highlight li {
-          margin-bottom: 10px;
-        }
-  
-        .case h4 {
-          margin-top: 0;
-          color: #ad1457;
-        }
-        .cta {
+      .container {
+        max-width: 860px;
+        margin: 150px auto; /*工事中が終わったら上部の余白は150⇒50に戻す*/
+        padding: 0 15px 60px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #e65100;
+        margin-bottom: 30px;
+      }
+
+      .section,
+      .highlight,
+      .case {
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 15px;
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.8s ease-out;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        background: #fff8e1;
+      }
+
+      .highlight {
+        background: #fff8e1;
+        border-left: 8px solid #fbc02d;
+      }
+
+      .case {
+        background: #fce4ec;
+        border-left: 8px solid #f06292;
+      }
+
+      .show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .section h3 {
+        font-size: 20px;
+        color: #e65100;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .section p {
+        margin: 0;
+        line-height: 1.8;
+      }
+
+      .highlight h4 {
+        margin-top: 0;
+        color: #e65100;
+        font-size: 18px;
+      }
+
+      .highlight ul {
+        padding-left: 1.2em;
+      }
+
+      .highlight li {
+        margin-bottom: 10px;
+      }
+
+      .case h4 {
+        margin-top: 0;
+        color: #ad1457;
+      }
+      .cta {
         margin-top: 30px;
         text-align: center;
         font-size: 18px;
@@ -144,29 +148,29 @@
       }
 
       .notice-box {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  background-color: #fff3cd; /* 薄い黄色背景 */
-  color: #856404;            /* 濃い茶色文字 */
-  padding: 10px 15px;
-  border: 1px solid #ffeeba;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  font-size: 14px;
-  z-index: 1000; /* 他の要素より前に出す */
-}
-  
-        @media (max-width: 600px) {
-          h2 {
-            font-size: 24px;
-          }
-  
-          .section h3 {
-            font-size: 18px;
-          }
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #fff3cd; /* 薄い黄色背景 */
+        color: #856404; /* 濃い茶色文字 */
+        padding: 10px 15px;
+        border: 1px solid #ffeeba;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        z-index: 1000; /* 他の要素より前に出す */
+      }
+
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 24px;
         }
-      </style>
+
+        .section h3 {
+          font-size: 18px;
+        }
+      }
+    </style>
 
     <meta name="generator" content="WordPress 6.8.1" />
     <link rel="icon" href="images/PocketCodeMini.png" sizes="32x32" />
@@ -175,7 +179,6 @@
     <meta name="msapplication-TileImage" content="images/PocketCode.png" />
   </head>
   <body class="blog wp-theme-PC" id="pagetop">
-    
     <!--Header-->
     <header>
       <div class="toggle"><span></span><span></span><span></span></div>
@@ -208,7 +211,6 @@
                   ><span class="link_line">お問い合わせ</span></a
                 >
               </li>
-
             </ul>
           </div>
           <!--navi-->
@@ -219,9 +221,9 @@
     </header>
 
     <div class="notice-box">
-      ⚠️まだ工事中です⚠️<br>
-      生徒募集はしてませんよ<br>
-      ９月ぐらいに開校できたらいいな。。。
+      ⚠️まだ工事中⚠️<br />
+      生徒募集はしてません<br />
+      ９月頃に開校できるかなぁ、、
     </div>
 
     <div class="container">
@@ -246,13 +248,16 @@
 
       <div class="section">
         <h3>💰 受講料</h3>
-        <p>月4回 8,800円（税込）</p>
+        <p>入会金 5,500円（税込）</br>
+          月4回 9,900円（税込）</br>
+          ご紹介だともっとお安くなります。
+        </p>
       </div>
 
       <div class="highlight">
         <h4>✨ こんな子にぴったり！</h4>
         <ul>
-          <li>ゲームやアニメが好き！</li>
+          <li>ゲームが好き！</li>
           <li>考えるのが好き！</li>
           <li>将来プログラマーになりたい！</li>
           <li>新しいことにチャレンジしたい！</li>
@@ -264,27 +269,25 @@
         中学生以上の学生で希望の方いましたらご相談ください
       </div>
     </div>
-  
-      <script>
-        // スクロールで表示アニメーション
-        const targets = document.querySelectorAll('.section, .highlight, .case');
-  
-        const callback = (entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('show');
-              observer.unobserve(entry.target); // 一度だけ表示するならこれ
-            }
-          });
-        };
-  
-        const observer = new IntersectionObserver(callback, {
-          threshold: 0.1
-        });
-  
-        targets.forEach(target => observer.observe(target));
-      </script>
-    
 
+    <script>
+      // スクロールで表示アニメーション
+      const targets = document.querySelectorAll(".section, .highlight, .case");
+
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); // 一度だけ表示するならこれ
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, {
+        threshold: 0.1,
+      });
+
+      targets.forEach((target) => observer.observe(target));
+    </script>
   </body>
 </html>
